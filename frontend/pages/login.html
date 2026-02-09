@@ -5,11 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Personal Finance Tracker</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-  <h1>Login</h1>
-  <a href="signup.html">Don't have an account? Sign Up</a>
-  <br>
-  <a href="../index.html">Back to Home</a>
+  <div class="header">
+    <section class="split-header">
+      <div class="header-left">
+        <a href="../index.html"><img src="../assets/logo/logo.png" alt="Logo" class="logo"></a>
+        <p class="heading-title">Personal Finance Tracker</p>
+      </div>
+      <div class="header-right">
+        <nav>
+          <ul class="landing-links">
+            <a class="howItWorks" href="#">How it works</a>
+            <a class="features" href="#">Features</a>
+            <a href="../pages/login.html">
+              <button class="login-button">Login</button>
+            </a>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </div>
+
+  <main class="login-page">
+    <section class="login-card">
+      <header class="card-header">
+        <h1>Welcome back</h1>
+        <p>Sign in to review your budget and stay on track.</p>
+      </header>
+
+      <form class="login-form" action="/login" method="post">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter your password" required>
+
+        <div class="form-actions">
+          <label class="remember">
+            <input type="checkbox" name="remember" value="yes">
+            Remember me
+          </label>
+          <a class="forgot" href="forgotPassword.html">Forgot password?</a>
+        </div>
+
+        <button type="submit">Log in</button>
+      </form>
+
+      <footer class="card-footer">
+        <p>Need an account? <a href="signup.html">Create one</a></p>
+        <a class="back-home" href="../index.html">&lt;- Back to home</a>
+      </footer>
+    </section>
+  </main>
 </body>
 </html>
