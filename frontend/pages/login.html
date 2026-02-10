@@ -59,5 +59,27 @@
       </footer>
     </section>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('.login-form');
+      if (!form) {
+        return;
+      }
+
+      // Redirect to the dashboard when using the static demo.
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const email = form.email.value.trim();
+        const password = form.password.value.trim();
+
+        if (!email || !password) {
+          return;
+        }
+
+        window.location.href = 'dashboard.html';
+      });
+    });
+  </script>
 </body>
 </html>
