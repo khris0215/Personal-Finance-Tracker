@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Personal Finance Tracker</title>
+  <base href="../">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="header">
+    <section class="split-header">
+      <div class="header-left">
+        <img src="assets/logo/logo.png" alt="Logo" class="logo">
+        <p class="heading-title">Personal Finance Tracker</p>
+      </div>
+      <div class="header-right">
+        <nav>
+          <ul class="landing-links">
+            <a class="howItWorks" href="#">Dashboard</a>
+            <a class="features" href="#">Transactions</a>
+            <a href="pages/login.html">
+              <button class="login-button logout-button">Logout</button>
+            </a>
+          </ul>
+        </nav>
+        
+      </div>
+    </section>
+  </div>
+
+  <main class="dashboard">
+    <section class="stats" aria-label="Overview statistics">
+      <article class="card">
+        <h2 class="card__title">Income</h2>
+        <p class="card__value">$5,000</p>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Expenses</h2>
+        <p class="card__value">$3,200</p>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Balance</h2>
+        <p class="card__value">$1,800</p>
+      </article>
+    </section>
+
+    <section class="form-section" aria-label="Add transaction">
+      <h2 class="section-title">Add Transaction</h2>
+      <form class="transaction-form">
+        <div class="transaction-form__group">
+          <label class="transaction-form__label" for="transaction-type">Type</label>
+          <select class="transaction-form__input" id="transaction-type" name="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </div>
+        <div class="transaction-form__group">
+          <label class="transaction-form__label" for="transaction-amount">Amount</label>
+          <input class="transaction-form__input" id="transaction-amount" type="number" name="amount" placeholder="0.00">
+        </div>
+        <div class="transaction-form__group">
+          <label class="transaction-form__label" for="transaction-category">Category</label>
+          <input class="transaction-form__input" id="transaction-category" type="text" name="category" placeholder="e.g. Food">
+        </div>
+        <div class="transaction-form__group">
+          <label class="transaction-form__label" for="transaction-description">Description</label>
+          <input class="transaction-form__input" id="transaction-description" type="text" name="description" placeholder="Add notes">
+        </div>
+        <div class="transaction-form__group">
+          <label class="transaction-form__label" for="transaction-date">Date</label>
+          <input class="transaction-form__input" id="transaction-date" type="date" name="date">
+        </div>
+        <button class="transaction-form__submit" type="submit">Add Transaction</button>
+      </form>
+    </section>
+
+    <section class="transactions" id="recent-transactions" aria-label="Recent transactions">
+      <h2 class="section-title">Recent Transactions</h2>
+      <ul class="transaction-list">
+        <li class="transaction-list__item">
+          <span class="transaction-list__date">Feb 10</span>
+          <span class="transaction-list__category">Food</span>
+          <span class="transaction-list__description">Pizza</span>
+          <span class="transaction-list__amount transaction-list__amount--expense">- $25</span>
+        </li>
+        <li class="transaction-list__item">
+          <span class="transaction-list__date">Feb 9</span>
+          <span class="transaction-list__category">Salary</span>
+          <span class="transaction-list__description">Monthly</span>
+          <span class="transaction-list__amount transaction-list__amount--income">+ $3,000</span>
+        </li>
+        <li class="transaction-list__item">
+          <span class="transaction-list__date">Feb 8</span>
+          <span class="transaction-list__category">Transport</span>
+          <span class="transaction-list__description">Uber</span>
+          <span class="transaction-list__amount transaction-list__amount--expense">- $15</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
